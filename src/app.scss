@@ -1,0 +1,135 @@
+:root {
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    background-color: $dark-gray;
+
+    color: $light-white;
+    
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: $light-blue;
+
+    &:hover {
+        color: $medium-blue;
+    }
+}
+
+// ::-webkit-scrollbar {
+//     width: 0.75rem;
+
+//     &-track {
+//         background: $dark-gray;
+//     }
+
+//     &-thumb {
+//         background: $gray;
+
+//         &:hover {
+//             background: $light-gray;
+//         }
+//     }
+
+//     &-button {
+//         background: green;
+        
+//         * {
+//             background: red;
+//         }
+        
+//         &:hover {
+//             background: blue;
+//         }
+//     }
+// }
+
+$table-lr-margin: 1rem;
+
+.post {
+    code {
+        display: inline-block;
+        background-color: $gray;
+        padding: 0.1rem 0.25rem;
+        border-radius: 0.2rem;
+    }
+
+    pre {
+        display: grid;
+        margin: 1rem 0;
+        > code {
+            // width: 100%;
+            padding: 0.5rem;
+            font-size: 14px;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+
+        thead {
+            th {
+                padding: 0.5rem $table-lr-margin;
+                border-bottom: 2px solid $light-gray;
+            }
+        }
+
+        td {
+            padding: 0.3rem $table-lr-margin;
+            border-top: 1px solid $gray;
+        }
+
+        th, td {
+            &:not(:first-child) {
+                border-left: 2px solid $light-gray;
+            }
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid $light-gray;
+        padding-left: 1rem;
+        margin: 1rem 0rem;
+
+        p {
+            padding: 0.25rem 0rem;
+        }
+    }
+
+    hr {
+        border: 1px solid $light-gray;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        a[href^="#"] {
+            display: block;
+            width: 100%;
+            
+            color: $light-white;
+            text-decoration: none;
+
+            &::before {
+                margin-left: -1em;
+
+                display: inline-block;
+                content: "#";
+
+                color: $dark-white;
+                width: 1em;
+                font-size: 0.8em;
+                visibility: hidden;
+            }
+
+            &:hover {
+                text-decoration: underline;
+
+                &::before {
+                    visibility: visible;
+                }
+            } 
+        }
+    }
+}
