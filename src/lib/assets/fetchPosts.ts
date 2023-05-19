@@ -22,7 +22,7 @@ export async function getPosts(): Promise<Post[]> {
 async function fetchPosts({ offset = 0, limit = 10, category = '' } = {}): Promise<{ posts: PostData[] }> {
     const allPosts = (await getPosts()).map(p => p.metadata)
 
-    let posts = allPosts.sort((a, b) => Number(new Date(a.date)) - Number(new Date(b.date)))
+    let posts = allPosts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
 
     if (category) posts = posts.filter(p => p.categories.includes(category))
 
