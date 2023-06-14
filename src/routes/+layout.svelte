@@ -1,5 +1,8 @@
 <script lang="ts">
+    import { fade } from "svelte/transition";
     import "../app.scss";
+
+    export let data
 
     const nav: [string, string][] = [
         ["Home", "/"],
@@ -11,14 +14,19 @@
 <nav>
     <div>
         {#each nav as [name, dir]}
-            <a href={dir}>{name}</a>
+            <a href={dir}
+            >{name}</a>
         {/each}
     </div>
 </nav>
 
-<div class='layout'>
-  <slot />
-</div>
+{#key data.pathname}
+    <div class='layout'
+        in:fade={{ duration: 100, delay: 150 }}
+        out:fade={{ duration: 100 }}>
+        <slot />
+    </div>
+{/key}
 
 <style lang="scss">
     .layout {
