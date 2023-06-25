@@ -50,6 +50,10 @@ a {
 $table-lr-margin: 1rem;
 
 .post {
+    p, pre {
+        margin: 2rem 0rem;
+    }
+
     code {
         display: inline-block;
         background-color: $gray;
