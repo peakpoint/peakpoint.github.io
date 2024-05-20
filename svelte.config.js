@@ -67,8 +67,8 @@ const config = {
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
   preprocess: [
-    vitePreprocess(),
     mdsvex(mdsvexConfig),
+    vitePreprocess(),
     preprocess({
       scss: {
         prependData: '@use "src/variables.scss" as *;',
