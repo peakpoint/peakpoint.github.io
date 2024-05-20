@@ -22,8 +22,8 @@
 
 {#key data.pathname}
     <div class='layout'
-        in:fade={{ duration: 100, delay: 150 }}
-        out:fade={{ duration: 100 }}>
+        in:fade|global={{ duration: 100, delay: 150 }}
+        out:fade|global={{ duration: 100 }}>
         <slot />
     </div>
 {/key}
