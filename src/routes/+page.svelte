@@ -2,7 +2,7 @@
 
 <p>
     I'm Tian,
-    a first year computer science student
+    a second year computer science student
     at the University of Waterloo.
 </p>
 
