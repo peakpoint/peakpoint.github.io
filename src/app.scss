@@ -49,16 +49,17 @@ a {
 
 $table-lr-margin: 1rem;
 
+code {
+    display: inline-block;
+    background-color: $gray;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.2rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
 .post {
     p, pre {
         margin: 2rem 0rem;
-    }
-
-    code {
-        display: inline-block;
-        background-color: $gray;
-        padding: 0.1rem 0.25rem;
-        border-radius: 0.2rem;
     }
 
     pre {
